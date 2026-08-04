@@ -1,63 +1,63 @@
-# Privacy Policy for HyperStat & HyperGFX Engine
+# Privacy Policy for HyperStat
 
 **Effective Date:** August 4, 2026  
 **Last Updated:** August 4, 2026  
 
-Thank you for choosing to be part of our gaming and diagnostics community at **HyperLabs-Dev** (**HyperStat** & **HyperGFX Engine**). We are deeply committed to maintaining trust, transparency, and safeguarding your personal information and right to privacy under global data safety standards (including Google Play Store terms, GDPR, and CCPA).
+Thank you for choosing to be part of our community at **HyperStat: FPS Overlay Monitor**. We are deeply committed to protecting your personal information, maintaining transparency, and safeguarding your right to privacy under international standards (including Google Play Store terms, GDPR, and CCPA).
 
 ---
 
-### 1. Information We Collect & Data Processing
-Our applications are designed as independent local system performance monitors and zero-root hardware optimization consoles. **We do not personally collect, steal, sell, or transmit your private personal identifiable data, passwords, or game credentials to any external servers.**
+### 1. Information We Collect
+HyperStat is designed to be an independent local system performance and FPS monitor. **We do not collect, store, or share any personal data.** 
 
-All hardware diagnostics, system statistics (CPU, RAM, Battery, Network, Storage, Display Hz), and game configuration files are accessed and modified strictly locally on your device in real time:
+All hardware diagnostics, system statistics (CPU, RAM, Battery, Network, Storage), and display frametime information are accessed strictly locally on your device in real-time:
 
-* **Standard Hardware Telemetry:** Core metrics such as CPU usage, RAM allocation, Battery thermals, Network throughput, and Storage capacity are queried directly from open Android runtime APIs and Linux kernel sysfs nodes provided by the Android operating system.
-* **Custom Hardware & GPU Estimations:** Due to manufacturer restrictions on direct GPU pipeline polling, our software utilizes custom statistical algorithms and refresh rate heuristics to derive accurate GPU Load and Frametime velocity without compromising system stability.
-
----
-
-### 2. Permissions & Specialized Hardware Capabilities
-To enable professional hardware monitoring and graphics modification, our software utilizes the following operating system permissions and technical frameworks:
-
-* **Shizuku Hardware Engine (Root-Free IPC):** Our Advanced Overdrive console utilizes the independent **Shizuku framework** (connecting via Android Binder IPC and wireless ADB) to execute privileged display and GPU optimization shell commands without requiring device root. Shizuku is utilized exclusively to apply custom render scaling, AMD FSR/GSR spatial upscaling shaders, EGL Anti-Aliasing flags (MSAA, FXAA, TAA, TXAA), V-Sync unclamp protocols, and physical screen Max-Hz refresh rate locks. **All shell commands and binder interactions execute 100% locally on your smartphone CPU; zero privilege tokens or device logs are ever transmitted off your device.**
-* **Scoped Storage & Game Config Editing (`UserCustom.ini`):** For Traditional (No-Shizuku) graphics unlocking, our app requests targeted folder storage access (via Android Storage Access Framework) to locate and update plain-text configuration files (such as Unreal Engine 4/5 `.ini` files in gaming sub-directories or user storage at `Documents/HyperGFX_Profiles/`). This access is used strictly to perform syntax string replacements (e.g., enabling 120 FPS CVars or removing rendering shadows). **We never read, harvest, modify, or transmit your private photographs, videos, personal documents, or game account authentication tokens.**
-* **Display Over Other Apps (System Overlay):** Used exclusively to render our floating horizontal gamer HUD statistics meter on top of active 3D games or applications. The overlay functions solely as a passive read-only performance meter (displaying real-time FPS, CPU thermals, memory usage, and crosshairs) and does NOT capture, monitor, record, or screenshot the content of underlying games or screens.
-* **Location (Fine - Legacy OS Only):** On legacy Android versions (Android 8-10), this system permission is strictly mandated by Android OS solely to display the current Wi-Fi network connection speed and SSID. We never track, GPS-locate, or save your physical real-world location.
+* **Standard Hardware Metrics:** Core system metrics such as CPU usage, RAM allocation, Battery levels, Network speed, and Storage capacity are queried directly from standard open Android APIs and Linux system files provided by the operating system. If a device manufacturer restricts access to any of these standard data points, HyperStat will either display the metric as unavailable or utilize safe fallback logic to approximate the value based on remaining available system data.
+* **Note on Custom Hardware Estimations:** Due to standard Android API restrictions, many device manufacturers block direct access to GPU hardware sensors (which normally results in an empty or 0% reading). To overcome this, HyperStat utilizes an independent, custom software algorithm to approximate **GPU Load** based on other available system heuristics and memory bandwidth. Additionally, metrics like **Frametime and FPS** are derived from the system's display refresh rate and precision telemetry rather than direct graphics pipeline intrusion. This ensures you receive accurate performance insights without compromising system stability.
 
 ---
 
-### 3. Third-Party Services, Analytics & Advertising (Google AdMob)
-To support continued independent developer maintenance and research, our application integrates official, Google-verified third-party software development kits (SDKs):
+### 2. Permissions & Usage
+To function properly and deliver seamless on-screen statistics, HyperStat requests the following system permissions:
 
-* **Google AdMob & Advertising Services:** We utilize **Google AdMob** to display non-intrusive banner and rewarded video advertisements. AdMob may process device identifiers (such as the Android Advertising ID / AAID), broad demographic inferred regions (city/country level), and general advertisement interaction metrics to deliver relevant, optimized advertising campaigns.
-* **Firebase Analytics & Crashlytics:** We utilize **Google Firebase** to collect anonymized crash logs, fatal exception traces, and general session engagement statistics to assist our engineering team in identifying performance bugs across diverse Android hardware models.
+* **Display Over Other Apps (System Overlay):** Used exclusively to render our floating performance HUD overlay widget on top of active 3D games or applications. The sole function of this overlay is to provide real-time, on-screen hardware statistics to the user (specifically displaying: Network speed, Frametime, FPS, CPU Load/Temperature, RAM Usage, GPU Load, and Battery Level). It functions as a passive read-only meter and does **not** interact with, record, screen-capture, or monitor the content of underlying apps or games.
+* **Optional Shizuku Permission (Precision Telemetry):** Users may optionally connect HyperStat to the independent **Shizuku framework** to unlock advanced, root-free precision reading of display frametimes and real-time FPS frequencies. Shizuku queries execute 100% locally on your processor; zero system commands, device logs, or personal identifiers are ever collected or transferred off your smartphone.
+* **Location (Fine - Legacy OS Only):** On older versions of Android (Android 8-10), this permission is strictly required by the Android operating system solely to read the name of the currently connected Wi-Fi SSID network and wireless speed. We **never** track, GPS-locate, store, or send your physical real-world location data.
+* **Storage / Media:** Used strictly to calculate and display the total and available free storage capacity on your device dashboard. We do not scan, read, copy, or access your personal files, photographs, or media.
 
-For further details on how our certified advertising partners process data under international regulatory rules (GDPR, CCPA, and Google Play Data Safety), please review:
+---
+
+### 3. Third-Party Services, Advertising & Analytics
+To support continuous software updates and developer maintenance, HyperStat integrates official, verified Google software development kits (SDKs):
+
+* **Google AdMob Advertising:** We utilize **Google AdMob** to serve non-intrusive advertisements (including App Open, banner, and interstitial ads during menu screen transitions). AdMob may collect and process device advertising identifiers (such as the Android Advertising ID / AAID) and broad anonymous regional metrics to serve relevant, optimized advertising campaigns.
+* **Firebase Analytics & Crashlytics:** We utilize **Google Firebase** strictly to collect anonymous crash telemetry and basic diagnostic usage statistics to assist our engineering team in identifying bugs and improving software stability across different Android hardware models. This data is completely anonymized and contains no personal user identifiers.
+
+For further details on how our certified advertising partners manage data in compliance with international privacy rules (including European GDPR, California CCPA, and Google Play Data Safety guidelines), please review:
 * [Google Privacy & Terms](https://policies.google.com/privacy)
 * [How Google uses data when you use our partners' sites or apps](https://policies.google.com/technologies/partner-sites)
 
 ---
 
 ### 4. Children's Privacy (COPPA Compliance)
-Our software utilities and performance monitoring applications do not target, address, or intentionally market to anyone under the age of 13. We do not knowingly collect or solicit personally identifiable information from children under 13 years of age.
+Our application does not target or address anyone under the age of 13. We do not knowingly solicit, process, or collect personally identifiable information from children under 13 years of age.
 
 ---
 
 ### 5. Trademark & Affiliation Disclaimer
-**"HyperStat" and "HyperGFX Engine" are proprietary, independent mobile system monitoring and game configuration optimization utilities created by HyperLabs-Dev. They are NOT affiliated, associated, authorized, endorsed by, or in any way officially connected with Google Inc., Tencent, Krafton, Epic Games, Activision, Qualcomm, AMD, or any other third-party trademark owners.** All game names, brand terms, and architectural benchmarks mentioned within the software serve purely descriptive and operational compatibility purposes.
+**"HyperStat: FPS Overlay Monitor" is an independent system monitoring and diagnostics tool created by HyperLabs-Dev. It is NOT affiliated, associated, authorized, endorsed by, or in any way officially connected with any other companies, products, services, or registered trademarks.** This application is a standalone diagnostic utility developed solely for Android devices.
 
 ---
 
-### 6. Limitation of Liability & Overdrive Disclaimer
-Our applications are provided strictly on an **"AS IS"** and available basis. While all hardware modifications (such as display refresh rate locks and EGL upscaling flags) utilize secure, manufacturer-provided system databases and root-free Shizuku APIs, the developers of HyperLabs-Dev assume no financial or legal liability for accidental battery drain, excessive device thermals, game account suspensions from third-party developers, or operating system resets resulting from aggressive hardware customization or incorrect software configuration.
+### 6. Limitation of Liability
+The App is provided strictly on an **"AS IS"** and available basis. The developers of HyperLabs-Dev are not liable for any direct or indirect damages, battery consumption impact, or data loss resulting from software usage or customization.
 
 ---
 
 ### 7. Changes to This Privacy Policy
-We reserve the right to update or revise this Privacy Policy periodically to reflect ongoing architectural upgrades or changing Play Store requirements. Any modifications will become effective immediately upon posting to this public web address with an updated effective date. You are advised to review this page periodically to stay informed of our data safety commitments.
+We may update our Privacy Policy from time to time to align with developer policy enhancements or new system capabilities. Any changes will become effective immediately upon posting to this public web page with an updated effective date. You are advised to review this page periodically for any changes.
 
 ---
 
-### 8. Contact Our Engineering Team
-If you have any questions, regulatory inquiries, or privacy suggestions regarding our software architecture, please reach out to the lead developer directly via our official Google Play Store application support listing or our official GitHub Developer Organization at [https://github.com/HyperLabs-Dev](https://github.com/HyperLabs-Dev).
+### 8. Contact Us
+If you have any questions, compliance feedback, or privacy suggestions regarding our software architecture, please reach out to our team directly via our official Google Play Store app support listing or via our GitHub Developer account at [https://github.com/HyperLabs-Dev](https://github.com/HyperLabs-Dev).
