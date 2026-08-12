@@ -60,4 +60,4 @@ We may update our Privacy Policy from time to time to align with developer polic
 ---
 
 ### 8. Contact Us
-If you have any questions, compliance feedback, or privacy suggestions regarding our software architecture, please reach out to our team directly via email at: **hyperlabs.dev@gmail.com** or through our official Google Play Store app support listing.
+If you have any questions, compliance feedback, or privacy suggestions regarding our software architecture, please reach out to our team directly via email at: **hyperlabs.dev@gmail.com**.
