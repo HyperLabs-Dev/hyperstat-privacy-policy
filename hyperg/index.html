@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - HyperG: Game Booster & FPS HUD</title>
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: #131a29;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --accent-color: #00ffa3;
+            --border-color: #1e293b;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            margin: 0;
+            padding: 24px 16px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 32px 28px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        h1 {
+            color: var(--accent-color);
+            font-size: 28px;
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+        .meta {
+            color: var(--text-secondary);
+            font-size: 13px;
+            margin-bottom: 24px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 12px;
+        }
+        h2 {
+            color: #ffffff;
+            font-size: 18px;
+            margin-top: 28px;
+            margin-bottom: 12px;
+            border-left: 3px solid var(--accent-color);
+            padding-left: 10px;
+        }
+        p, li {
+            color: var(--text-secondary);
+            font-size: 14.5px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        strong {
+            color: #ffffff;
+        }
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .badge {
+            display: inline-block;
+            background: rgba(0, 255, 163, 0.12);
+            color: var(--accent-color);
+            border: 1px solid rgba(0, 255, 163, 0.3);
+            border-radius: 6px;
+            padding: 3px 8px;
+            font-size: 11px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="badge">OFFICIAL PRIVACY POLICY</div>
+        <h1>Privacy Policy for HyperG</h1>
+        <div class="meta">
+            <strong>Application:</strong> HyperG: Game Booster & FPS HUD<br>
+            <strong>Developer:</strong> HyperLabs-Dev<br>
+            <strong>Effective Date:</strong> October 21, 2026
+        </div>
+
+        <p>Thank you for using <strong>HyperG: Game Booster & FPS HUD</strong> ("HyperG", "we", "our", or "the app"). We are deeply committed to protecting your privacy and ensuring complete transparency regarding how our software operates on your device.</p>
+
+        <h2>1. Zero Personal Data Collection</h2>
+        <p>HyperG is engineered as a local-first gaming optimization and telemetry tool. <strong>We do not collect, transmit, store, sell, or monetize any personal user information.</strong></p>
+        <ul>
+            <li>No account registration, email address, phone number, or login credentials are required.</li>
+            <li>No biometric, contact, location, SMS, or camera data is ever accessed.</li>
+            <li>All hardware telemetry calculations (CPU workload, RAM consumption, battery temperature, storage metrics) are computed exclusively on-device in temporary memory.</li>
+        </ul>
+
+        <h2>2. Permissions & Usage Disclosures</h2>
+        <p>HyperG requests only the permissions strictly required to execute its system-level performance enhancements:</p>
+        <ul>
+            <li><strong>Display Over Other Apps (<code>SYSTEM_ALERT_WINDOW</code>):</strong> Used solely to project the floating gaming telemetry HUD overlay (live FPS counter, CPU/GPU meters, clock, and battery stats) while you are playing games. It does not record or intercept screen contents.</li>
+            <li><strong>Foreground Service (<code>FOREGROUND_SERVICE</code>):</strong> Required to maintain background hardware telemetry without Android terminating the monitor during active gaming sessions.</li>
+            <li><strong>Kill Background Processes (<code>KILL_BACKGROUND_PROCESSES</code>):</strong> Used by the RAM Booster engine to terminate cached third-party background tasks to free physical memory for gaming.</li>
+            <li><strong>Optional Shizuku Framework:</strong> Users may optionally authorize the independent Shizuku system service (<code>uid=2000</code>) to perform privileged system cache compaction and lock the display refresh rate (120Hz/90Hz/60Hz). Shizuku commands run 100% locally on your smartphone and transmit zero data off your hardware.</li>
+        </ul>
+
+        <h2>3. Third-Party Advertising (Google AdMob)</h2>
+        <p>To support ongoing software development, HyperG integrates <strong>Google AdMob</strong> to display non-intrusive advertisements (such as banner ads and occasional game launch interstitials). Google AdMob may process non-personally identifiable diagnostic and advertising identifiers (such as the Google Advertising ID) in strict accordance with <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy & Terms</a>.</p>
+
+        <h2>4. Children's Online Privacy (COPPA Compliance)</h2>
+        <p>HyperG does not address anyone under the age of 13. We do not knowingly collect or solicit personally identifiable information from children.</p>
+
+        <h2>5. Trademark & Affiliation Disclaimer</h2>
+        <p><strong>"HyperG: Game Booster & FPS HUD"</strong> is an independent performance tool developed by HyperLabs-Dev. It is not affiliated with, authorized, endorsed by, or in any way officially connected with any other games, hardware manufacturers, or registered trademarks.</p>
+
+        <h2>6. Developer Contact</h2>
+        <p>If you have any questions or feedback regarding this Privacy Policy, please contact our development team via GitHub:</p>
+        <p><a href="https://github.com/HyperLabs-Dev" target="_blank" rel="noopener">https://github.com/HyperLabs-Dev</a></p>
+    </div>
+</body>
+</html>
